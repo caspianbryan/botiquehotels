@@ -1,101 +1,405 @@
+import Courasel from "@/components/Courasel";
 import Image from "next/image";
+import Accordion from "@/components/Accordion";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <header>
+        <div
+          className="w-full h-[80vh] bg-cover"
+          style={{ backgroundImage: `url('/images/4.jpg')` }}
+        >
+          {/* bg-bannerImg bg-repeat bg-cover */}
         </div>
+      </header>
+
+      <main className="m-4 md:mx-5 lg:mx-20">
+        {/* courasel images */}
+        <section className="my-4">
+          <div className="mb-16 mt-8 space-y-6">
+            <h2>Destination</h2>
+            <Courasel />
+          </div>
+        </section>
+
+        {/* info image */}
+        <section className="my-4">
+          <div className="space-y-4 md:flex md:space-x-16 bg-gray-100 px-6 md:p-0 p-2">
+            <Image
+              src="/images/24.jpg"
+              height={400}
+              width={800}
+              alt="right arrow"
+              className=" md:w-2/4 rounded-md"
+            />
+            <div className="flex flex-col justify-around items-left p-4">
+              <h2 className="">The Best Botique Hotels In Venice</h2>
+              <p className="text-justify">
+                We have curated the best Venice boutique hotels with exquisite
+                design and comfort. You will find everything from luxury plazzo
+                to hotels with scenic canal views.
+              </p>
+              <button className="bg-black text-white w-full  rounded-lg py-3 my-4 md:w-32">
+                read more
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* grid place items */}
+        <section className="my-14">
+          {/* Europe places */}
+          <div className="">
+            <div className="flex justify-between mb-2">
+              <h2 className="text-xl">Europe</h2>
+              <Image
+                src="/images/36.jpg"
+                height={25}
+                width={25}
+                alt="right arrow"
+              />
+            </div>
+            {/* container for card */}
+            <div className="gap-3 flex overflow-x-auto md:grid md:grid-cols-5 ">
+              {/* card 1 */}
+              <div className=" bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/69.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="px-2 py-2">
+                  <p>Copenhegen, Denmark</p>
+                  <h2>Manon Les Suites</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/13.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="px-2 py-6">
+                  <p>Copenhegen, Denmark</p>
+                  <h2>Manon Les Suites</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/71.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Copenhegen, Denmark</p>
+                  <h2>Manon Les Suites</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/74.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Copenhegen, Denmark</p>
+                  <h2>Manon Les Suites</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/17.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Copenhegen, Denmark</p>
+                  <h2>Manon Les Suites</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Americas places */}
+          <div className="mt-8">
+            <div className="flex justify-between mb-2">
+              <h2>Americas</h2>
+              <Image
+                src="/images/36.jpg"
+                height={25}
+                width={25}
+                alt="right arrow"
+              />
+            </div>
+            <div className="gap-3 flex overflow-x-auto md:grid md:grid-cols-5">
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/7.jpg"
+                  height={150}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Montreal, Canada</p>
+                  <h2>Hotel Monville</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/21.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Montreal, Canada</p>
+                  <h2>Hotel Monville</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/18.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Montreal, Canada</p>
+                  <h2>Hotel Monville</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/10.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Montreal, Canada</p>
+                  <h2>Hotel Monville</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/29.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Montreal, Canada</p>
+                  <h2>Hotel Monville</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* info image 2 */}
+        <section className="my-4">
+          <div className="space-y-4 md:flex md:space-x-16 bg-gray-100 px-6 p-2">
+            <Image
+              src="/images/27.jpg"
+              height={400}
+              width={600}
+              alt="right arrow"
+              className="md:w-2/4 rounded-md"
+            />
+            <div className="flex flex-col justify-around items-left p-4">
+              <h2 className="">The Best Boutique Hotels In Spain</h2>
+              <p className="text-justify">
+                We have curated the best boutique hotels in Spain with top-notch
+                design and tranquility. Discover everything from from luxury
+                hotels in Ibiza to design hotels in Barcelona.
+              </p>
+              <button className="bg-black text-white w-full rounded-lg py-3 my-4 md:w-32">
+                read more
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* grid place items 2 */}
+        <section className="my-14">
+          <div>
+            {/* oceania  */}
+            <div className="flex justify-between mb-2">
+              <h2>Oceania</h2>
+              <Image
+                src="/images/36.jpg"
+                height={25}
+                width={25}
+                alt="right arrow"
+              />
+            </div>
+            <div className="gap-3 flex overflow-x-auto md:grid md:grid-cols-5">
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/55.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Sydney, Australia</p>
+                  <h2>Paramount House</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/56.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Sydney, Australia</p>
+                  <h2>Paramount House</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/64.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Sydney, Australia</p>
+                  <h2>Paramount House</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/68.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Sydney, Australia</p>
+                  <h2>Paramount House</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/42.jpg"
+                  height={200}
+                  width={300}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Sydney, Australia</p>
+                  <h2>Paramount House</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Asia */}
+          <div className="mt-8">
+            <div className="flex justify-between mb-2">
+              <h2>Asia</h2>
+              <Image
+                src="/images/36.jpg"
+                height={25}
+                width={25}
+                alt="right arrow"
+              />
+            </div>
+            <div className="gap-3 flex overflow-x-auto md:grid md:grid-cols-5">
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/66.jpg"
+                  height={300}
+                  width={400}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Tel Aviv, Israel</p>
+                  <h2>R48 Hotel & Garden</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/84.jpg"
+                  height={300}
+                  width={400}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Tel Aviv, Israel</p>
+                  <h2>R48 Hotel & Garden</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/83.jpg"
+                  height={300}
+                  width={400}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Tel Aviv, Israel</p>
+                  <h2>R48 Hotel & Garden</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/86.jpg"
+                  height={300}
+                  width={400}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Tel Aviv, Israel</p>
+                  <h2>R48 Hotel & Garden</h2>
+                </div>
+              </div>
+              <div className="bg-gray-200 rounded-md flex-shrink-0 max-w-60 md:w-auto">
+                <Image
+                  src="/images/87.jpg"
+                  height={300}
+                  width={400}
+                  alt="right arrow"
+                />
+                <div className="p-2">
+                  <p>Tel Aviv, Israel</p>
+                  <h2>R48 Hotel & Garden</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* last info img */}
+        <section className="my-6 bg-footerImg bg-repeat bg-cover mx-[-1rem] md:mx-2">
+          <div className="space-y-8 mx-8 min-h-[80vh] text-white flex flex-col items-start justify-center">
+            <h1 className="font-bold my-4">
+              The Best Sustainable Boutique Hotels
+            </h1>
+            <p className="py-4">
+              We have hand-curated a list of the 20 best sustainable boutique
+              hotels across the world that actively promote sustainability while
+              offering top-nothch design and comfort.
+            </p>
+            <button className="bg-white text-black rounded-lg px-5 py-2 outline outline-1">
+              read more
+            </button>
+          </div>
+        </section>
+
+        {/* accordion info */}
+        <section className="hidden md:my-14 md:block">
+          <Accordion />
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
