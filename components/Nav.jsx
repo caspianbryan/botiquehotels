@@ -44,44 +44,22 @@ const Nav = () => {
           {/* flex items-center justify-center space-x-10 p-2 */}
           {navLinks.map((nav) => (
             <Link href={nav.href} key={nav.id}>
-              <li key={nav.id} className="sm:hide md:flex hover:underline">
-                {nav.label}
-                <Image
-                  src='/images/31.jpg'
-                  height={20}
-                  width={25}
-                  alt="icon"
-                />
+              <li key={nav.id} className="sm:hide md:flex hover:underline text-xs">
+                <div className="flex items-center space-x-2">
+                  {nav.label}
+                  <Image
+                    src='/images/31.jpg'
+                    height={10}
+                    width={15}
+                    alt="icon"
+                  />
+                </div>
               </li>
             </Link>
           ))}
         </ul>
       </div>
       {isPopup && (
-        // <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-        //   <div className="bg-white p-6 rounded-lg shadow-lg">
-        //     <button
-        //       onClick={togglePlaces}
-        //       className="absolute top-2 right-2 text-gray-600 font-bold"
-        //     >
-        //       x
-        //     </button>
-        //     <ul className="space-y-4">
-        //       {navLinks.map((link) => (
-        //         <li key={link.href}>
-        //           <Link 
-        //             href={link.href}
-        //             onClick={togglePlaces}
-        //             className="text-blue-500 hover:underline"
-        //           >
-        //             {link.label}
-        //           </Link>
-        //         </li>
-        //       ))}
-        //     </ul>
-        //   </div>
-        // </div>
-
         <div className="fixed inset-0 bg-black bg-opacity-50 flex">
           <div className="bg-white w-full md:w-1/3 h-full transform transition-transform duration-1000 
             ease-in-out translate-x-0"

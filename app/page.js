@@ -3,6 +3,15 @@ import Image from "next/image";
 import Accordion from "@/components/Accordion";
 
 export default function Home() {
+  const destinations = [
+    { id: 1, name: "Lisbon", image: "/images/40.jpg" },
+    { id: 2, name: "Paris", image: "/images/77.jpg" },
+    { id: 3, name: "London", image: "/images/76.jpg" },
+    { id: 4, name: "Barcelona", image: "/images/70.jpg" },
+    { id: 5, name: "Copenhagen", image: "/images/56.jpg" },
+    { id: 6, name: "Amsterdam", image: "/images/57.jpg" },
+  ];
+
   return (
     <>
       <header>
@@ -10,7 +19,8 @@ export default function Home() {
           className="w-full h-[80vh] bg-cover"
           style={{ backgroundImage: `url('/images/4.jpg')` }}
         >
-          {/* bg-bannerImg bg-repeat bg-cover */}
+          {/* <div className="w-full h-full bg-black bg-opacity-50"> 
+          </div> */}
         </div>
       </header>
 
@@ -19,7 +29,7 @@ export default function Home() {
         <section className="my-4">
           <div className="mb-16 mt-8 space-y-6">
             <h2>Destination</h2>
-            <Courasel />
+            <Courasel data={destinations} />
           </div>
         </section>
 

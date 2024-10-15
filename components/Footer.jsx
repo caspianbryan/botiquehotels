@@ -5,16 +5,8 @@ import { useState } from "react"
 
 const navLinks = [
   {
-    href: '/Europe',
-    label: 'Europe'
-  },
-  {
-    href: '/Asia',
-    label: 'Asia'
-  },
-  {
-    href: '/Americas',
-    label: 'Americas'
+    href: '/Hotels',
+    label: 'Hotels'
   },
   {
     href: '/Search',
@@ -23,6 +15,10 @@ const navLinks = [
   {
     href: '/About',
     label: 'About'
+  },
+  {
+    href: '/T&C',
+    label: 'T&C'
   },
 ]
 
@@ -36,9 +32,9 @@ const Footer = () => {
   return (
     <footer className="my-4">
       <div className="mb-6">
-        <ul className="flex space-x-4 justify-center">
+        <ul className="flex space-x-6 justify-center">
           {navLinks.map((links) => (
-            <li key={links.href}>
+            <li key={links.href} className="hover:underline">
               <Link
                 href={links.href}
                 onClick={() => under(links.href)}
@@ -52,7 +48,7 @@ const Footer = () => {
       </div>
       <div className="text-center my-2 space-y-2">
         <Link href='/'><h2>Boutique Hotels</h2></Link>
-        <p>Curated Botique Hotel Guides</p>
+        <p className="text-xs">Curated Botique Hotel Guides</p>
       </div>
     </footer>
   )
