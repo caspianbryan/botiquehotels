@@ -4,22 +4,10 @@ import Link from "next/link"
 import { useState } from "react"
 
 const navLinks = [
-  {
-    href: '/Hotels',
-    label: 'Hotels'
-  },
-  {
-    href: '/Search',
-    label: 'Search'
-  },
-  {
-    href: '/About',
-    label: 'About'
-  },
-  {
-    href: '/T&C',
-    label: 'T&C'
-  },
+  { href: '/Hotels', label: 'Hotels' },
+  { href: '/Search', label: 'Search' },
+  { href: '/About', label: 'About' },
+  { href: '/T&C', label: 'T&C' },
 ]
 
 const Footer = () => {

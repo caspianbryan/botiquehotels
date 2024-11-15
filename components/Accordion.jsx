@@ -31,7 +31,7 @@ const Accordion = () => {
 
     return (
         <div className='bg-gray-100 my-6 p-6'>
-            <h2>Frequently Asked Questions</h2>
+            <h2 className='font-bold text-xl'>Frequently Asked Questions</h2>
 
             {faq.map((faq, index) => (
                 <div key={index} className='m-2 p-2 border-b-2'>
@@ -47,7 +47,7 @@ const Accordion = () => {
                             alt='collapse'
                             className={`transition-transform  duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
                         />
-                        <h3 className='text-lg font-semibold'>{faq.question}</h3>
+                        <h3 className='text-lg'>{faq.question}</h3>
                     </div>
 
                     {/* accordion cotent */}
